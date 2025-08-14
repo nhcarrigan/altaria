@@ -28,7 +28,7 @@ export const checkAltText = async(message: Message): Promise<void> => {
   if (noDescription.size > 0) {
     const reminder = getRandomValue(reminders);
     await message.reply({
-      content: reminder,
+      content: `${reminder}\n-# If you do not know how to do this, check [Discord's help article](<https://support.discord.com/hc/en-us/articles/211866427-How-do-I-upload-images-and-GIFs>)!`,
     }).catch(() => {
       return null;
     });
