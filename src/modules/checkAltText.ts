@@ -29,6 +29,8 @@ export const checkAltText = async(message: Message): Promise<void> => {
     const reminder = getRandomValue(reminders);
     await message.reply({
       content: reminder,
+    }).catch(() => {
+      return null;
     });
   }
 };
