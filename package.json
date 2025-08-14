@@ -1,0 +1,29 @@
+{
+  "name": "altaria",
+  "version": "0.0.0",
+  "description": "Discord bot that gently reminds you to use alt text.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint src --max-warnings 0",
+    "start": "op run --env-file=./prod.env -- node prod/index.js",
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.14.0",
+  "devDependencies": {
+    "@nhcarrigan/eslint-config": "5.2.0",
+    "@nhcarrigan/typescript-config": "4.0.0",
+    "@types/node": "24.2.1",
+    "eslint": "9.33.0",
+    "typescript": "5.9.2"
+  },
+  "dependencies": {
+    "@nhcarrigan/logger": "1.0.0",
+    "discord.js": "14.21.0",
+    "fastify": "5.5.0"
+  }
+}
