@@ -18,7 +18,7 @@ const html = `<!DOCTYPE html>
   </head>
   <body>
     <main>
-    <h1>Liora</h1>
+    <h1>Altaria</h1>
     <img src="https://cdn.nhcarrigan.com/new-avatars/altaria.png" width="250" alt="Altaria" />
     <section>
       <p>Discord bot that gives you a gentle reminder when you forget to attach alt-text to an image.</p>
