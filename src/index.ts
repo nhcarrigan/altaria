@@ -19,7 +19,10 @@ const client = new Client({
 });
 
 client.once(Events.ClientReady, () => {
-  void logger.log("info", `Logged in as ${client.user?.username ?? "unknown user"}`);
+  void logger.log(
+    "info",
+    `Logged in as ${client.user?.username ?? "unknown user"}`,
+  );
 });
 
 client.on(Events.MessageCreate, (message) => {
@@ -30,8 +33,11 @@ client.on(Events.InteractionCreate, (interaction) => {
   if (!interaction.isChatInputCommand()) {
     return;
   }
-  void interaction.reply({ components: blocks, flags: MessageFlags.IsComponentsV2 });
-})
+  void interaction.reply({
+    components: blocks,
+    flags:      MessageFlags.IsComponentsV2,
+  });
+});
 
 await client.login(process.env.BOT_TOKEN);
 instantiateServer();
