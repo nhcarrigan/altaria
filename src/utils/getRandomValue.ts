@@ -4,6 +4,8 @@
  * @author Naomi Carrigan
  */
 
+import { randomInt } from "node:crypto";
+
 /**
  * Returns a random value from the provided array.
  * @template T - The type of the elements in the array.
@@ -11,7 +13,7 @@
  * @returns A random value from the array.
  */
 export const getRandomValue = <T>(array: Array<T>): T => {
-  const randomIndex = Math.floor(Math.random() * array.length);
+  const randomIndex = randomInt(0, array.length);
   // eslint-disable-next-line @typescript-eslint/consistent-type-assertions -- We know the array is not empty.
   return array[randomIndex] as T;
 };
