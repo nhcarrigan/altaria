@@ -6,7 +6,7 @@
 
 /* eslint-disable stylistic/max-len -- there will be some long strings in here. */
 
-export const altariaReminders = [
+export const reminders = [
   // 🌸 Gentle encouragement (20)
   "Next time, give your image a tiny description—it helps everyone feel included~ 💖",
   "A quick alt-text on your next post will make your image bloom for all to see~ 🌸",
