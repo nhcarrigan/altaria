@@ -28,7 +28,7 @@ export const checkAltText = async(message: Message): Promise<void> => {
   if (noDescription.size > 0) {
     const reminder = getRandomValue(reminders);
     await message.reply({
-      content: `${reminder}\n-# If you do not know how to do this, check [Discord's help article](<https://support.discord.com/hc/en-us/articles/211866427-How-do-I-upload-images-and-GIFs>)!\n-# Need help writing descriptive text? Our bot [Cordelia](<https://discord.com/oauth2/authorize?client_id=1338664192714211459>) can do it for you!`,
+      content: `${reminder}\n-# If you do not know how to do this, check [Discord's help article](<https://support.discord.com/hc/en-us/articles/211866427-How-do-I-upload-images-and-GIFs>)!\n-# Need help writing descriptive text? Our bot [Cordelia](<https://cordelia.nhcarrigan.com>) can do it for you!`,
     }).catch(() => {
       return null;
     });
