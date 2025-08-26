@@ -19,7 +19,7 @@ const html = `<!DOCTYPE html>
   <body>
     <main>
     <h1>Altaria</h1>
-    <img src="https://cdn.nhcarrigan.com/new-avatars/altaria.png" width="250" alt="Altaria" />
+    <img src="https://cdn.nhcarrigan.com/new-avatars/altaria-full.png" width="250" alt="Altaria" />
     <section>
       <p>Discord bot that gives you a gentle reminder when you forget to attach alt-text to an image.</p>
       <a href="https://discord.com/oauth2/authorize?client_id=1405356559214837860" class="social-button discord-button" style="display: inline-block; background-color: #5865F2; color: white; padding: 10px 20px; text-decoration: none; border-radius: 4px; margin: 5px;">
