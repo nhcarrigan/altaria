@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@nhcarrigan/discord-analytics':
-        specifier: 0.0.3
-        version: 0.0.3(@nhcarrigan/logger@1.1.1)(discord.js@14.21.0)
+        specifier: 0.0.4
+        version: 0.0.4(@nhcarrigan/logger@1.1.1)(discord.js@14.21.0)
       '@nhcarrigan/logger':
         specifier: 1.1.1
         version: 1.1.1
@@ -337,8 +337,8 @@ packages:
   '@jridgewell/sourcemap-codec@1.5.5':
     resolution: {integrity: sha512-cYQ9310grqxueWbl+WuIUIaiUaDcj7WOq5fVhEljNVgRfOUhY9fy2zTvfoqWsnebh8Sl70VScFbICvJnLKB0Og==}
 
-  '@nhcarrigan/discord-analytics@0.0.3':
-    resolution: {integrity: sha512-XUHcvS3ZbuwVpztHH7pC0T/C8nOJt/T5qz7pDKp3/4Kvlbg0UdeVSZio27QkLqRtB/CvNUS78xM3k9odwN1M7A==}
+  '@nhcarrigan/discord-analytics@0.0.4':
+    resolution: {integrity: sha512-421VMVbqXEiPgMrCQwGpfa8vXb6gsk8XZpcm2N3WCpAhoukiM9A+f6v7eZzD0OcsXzmMziLlWiV5QrsKppDa5g==}
     peerDependencies:
       '@nhcarrigan/logger': '>=1.1.0-hotfix'
       discord.js: ^14.0.0
@@ -1188,6 +1188,11 @@ packages:
   flat-cache@4.0.1:
     resolution: {integrity: sha512-f7ccFPK3SXFHpx15UIGyRJ/FJQctuKZ0zVuN3frBo4HnK3cay9VEW0R6yPYFHC0AgqhukPzKjq22t5DmAyqGyw==}
     engines: {node: '>=16'}
+
+  flat@6.0.1:
+    resolution: {integrity: sha512-/3FfIa8mbrg3xE7+wAhWeV+bd7L2Mof+xtZb5dRDKZ+wDvYJK4WDYeIOuOhre5Yv5aQObZrlbRmk3RTSiuQBtw==}
+    engines: {node: '>=18'}
+    hasBin: true
 
   flatted@3.3.3:
     resolution: {integrity: sha512-GX+ysw4PBCz0PzosHDepZGANEuFCMLrnRTiEy9McGjmkCQYwRq4A/X786G/fjM/+OjsWSU1ZrY5qyARZmO/uwg==}
@@ -2470,10 +2475,11 @@ snapshots:
 
   '@jridgewell/sourcemap-codec@1.5.5': {}
 
-  '@nhcarrigan/discord-analytics@0.0.3(@nhcarrigan/logger@1.1.1)(discord.js@14.21.0)':
+  '@nhcarrigan/discord-analytics@0.0.4(@nhcarrigan/logger@1.1.1)(discord.js@14.21.0)':
     dependencies:
       '@nhcarrigan/logger': 1.1.1
       discord.js: 14.21.0
+      flat: 6.0.1
       node-schedule: 2.1.1
 
   '@nhcarrigan/eslint-config@5.2.0(@typescript-eslint/utils@8.39.1(eslint@9.33.0)(typescript@5.9.2))(eslint@9.33.0)(playwright@1.54.2)(react@19.1.1)(typescript@5.9.2)(vitest@3.2.4(@types/node@24.2.1))':
@@ -3586,6 +3592,8 @@ snapshots:
     dependencies:
       flatted: 3.3.3
       keyv: 4.5.4
+
+  flat@6.0.1: {}
 
   flatted@3.3.3: {}
 
