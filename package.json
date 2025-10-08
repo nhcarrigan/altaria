@@ -22,7 +22,8 @@
     "typescript": "5.9.2"
   },
   "dependencies": {
-    "@nhcarrigan/logger": "1.0.0",
+    "@nhcarrigan/discord-analytics": "0.0.3",
+    "@nhcarrigan/logger": "1.1.1",
     "discord.js": "14.21.0",
     "fastify": "5.5.0"
   }

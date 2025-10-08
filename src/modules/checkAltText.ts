@@ -6,6 +6,7 @@
 
 import { reminders } from "../config/reminders.js";
 import { getRandomValue } from "../utils/getRandomValue.js";
+import { logger } from "../utils/logger.js";
 import type { Message } from "discord.js";
 
 /**
@@ -32,5 +33,7 @@ export const checkAltText = async(message: Message): Promise<void> => {
     }).catch(() => {
       return null;
     });
+
+    await logger.metric("alt_text_missing", 1, {});
   }
 };
