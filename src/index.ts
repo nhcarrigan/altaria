@@ -30,7 +30,6 @@ client.once(Events.ClientReady, () => {
 });
 
 client.on(Events.MessageCreate, (message) => {
-  void analytics.logGatewayEvent(Events.MessageCreate, { ...message });
   void checkAltText(message);
 });
 
