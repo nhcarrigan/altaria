@@ -8,6 +8,7 @@ import { DiscordAnalytics } from "@nhcarrigan/discord-analytics";
 import { Client, GatewayIntentBits, Events, MessageFlags } from "discord.js";
 import { blocks } from "./config/blocks.js";
 import { checkAltText } from "./modules/checkAltText.js";
+import { processButton } from "./modules/processButton.js";
 import { instantiateServer } from "./server/serve.js";
 import { logger } from "./utils/logger.js";
 
@@ -35,13 +36,15 @@ client.on(Events.MessageCreate, (message) => {
 
 client.on(Events.InteractionCreate, (interaction) => {
   void analytics.logGatewayEvent(Events.InteractionCreate, { ...interaction });
-  if (!interaction.isChatInputCommand()) {
-    return;
+  if (interaction.isChatInputCommand()) {
+    void interaction.reply({
+      components: blocks,
+      flags:      MessageFlags.IsComponentsV2,
+    });
   }
-  void interaction.reply({
-    components: blocks,
-    flags:      MessageFlags.IsComponentsV2,
-  });
+  if (interaction.isButton()) {
+    void processButton(interaction);
+  }
 });
 
 await client.login(process.env.BOT_TOKEN);
