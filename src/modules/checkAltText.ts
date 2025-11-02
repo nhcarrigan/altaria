@@ -15,6 +15,10 @@ import type { Message } from "discord.js";
  * @param message - The message payload from Discord.
  */
 export const checkAltText = async(message: Message): Promise<void> => {
+  if (message.author.bot) {
+    return;
+  }
+
   if (message.attachments.size <= 0) {
     return;
   }
